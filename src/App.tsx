@@ -10,9 +10,10 @@ export default function App() {
 
   const commands: Commands = {
     hello: () => 'Hello. This is a working black box command.',
-    help: () => 'Try: hello, clear, status, or type any custom text.',
+    help: () => 'Try: hello, clear, status, bugswitch, or type any custom text.',
     clear: () => '',
-    status: () => 'Status: the launcher is running normally.'
+    status: () => 'Status: the launcher is running normally.',
+    bugswitch: () => `[Bugswitch Handshake]\nProtocol: v1.0.0\nStatus: SIMULATED (Bridge Ready)\nLatency: 42ms\nSecure Token: token_BSWITCH_${Math.random().toString(36).substring(2, 8).toUpperCase()}`
   };
 
   const runCommand = (raw: string): string => {
@@ -95,6 +96,13 @@ export default function App() {
             onClick={() => handleChipClick('status')}
           >
             status
+          </button>
+          <button
+            id="chip_bugswitch"
+            className="retro-chip px-3.5 py-2 text-sm text-[var(--text)] font-semibold cursor-pointer"
+            onClick={() => handleChipClick('bugswitch')}
+          >
+            bugswitch
           </button>
         </div>
 
