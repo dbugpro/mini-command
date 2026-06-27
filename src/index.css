@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #d7d2c8;
+  --panel: #f2eee8;
+  --panel-edge: #cfc7bb;
+  --field: #f9f6ef;
+  --field-edge: #d2c7b6;
+  --button: #bcc2ad;
+  --button-edge: #8f947f;
+  --text: #24304a;
+  --shadow: rgba(0, 0, 0, 0.18);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--bg);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--text);
+}
+
+/* Beautiful custom active classes for 3D buttons */
+.retro-btn {
+  border: none;
+  border-radius: 14px;
+  font-weight: 600;
+  color: var(--text);
+  background: linear-gradient(180deg, #dbe0ce, var(--button));
+  box-shadow: 0 4px 0 var(--button-edge), 0 6px 12px var(--shadow);
+  cursor: pointer;
+  transition: transform 0.05s, box-shadow 0.05s;
+}
+
+.retro-btn:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 var(--button-edge), 0 3px 8px rgba(0, 0, 0, 0.14);
+}
+
+.retro-chip {
+  border: none;
+  border-radius: 999px;
+  font-weight: 600;
+  color: var(--text);
+  background: linear-gradient(180deg, #bcc2ad, #aab09b);
+  box-shadow: 0 4px 0 #8f947f, 0 6px 12px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  transition: transform 0.05s, box-shadow 0.05s;
+}
+
+.retro-chip:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 #8f947f, 0 3px 6px rgba(0, 0, 0, 0.1);
+}
