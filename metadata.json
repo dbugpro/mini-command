@@ -1,0 +1,6 @@
+{
+  "name": "Mini Command Launcher",
+  "description": "An interactive, keyboard-friendly command palette and productivity launcher.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
